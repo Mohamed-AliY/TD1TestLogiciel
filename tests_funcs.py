@@ -32,5 +32,12 @@ class TestFuncs(unittest.TestCase):
     def test_estArith(self):
         self.assertTrue(funcs.estArith([3,6,9,12,15]))
         self.assertFalse(funcs.estArith([7,2,3,5,16]))
+    
+    def test_suiteGeo(self):
+        _,val=funcs.suiteGeo(3,[1,2,4,8,16])
+        self.assertEqual(val,[32,64,128])
+    def test_suiteArith(self):
+        _,val=funcs.suiteArith(3,[3,6,9,12,15])
+        self.assertEqual(val,[18,21,24])
 if __name__ == '__main__':
     unittest.main()
