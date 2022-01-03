@@ -33,5 +33,22 @@ def ecart_type(l):
     s/=len(l)
     return pow(s,0.5)
 
+def estGeo(l):
+    if len(l)<1:
+        return None
+    r=l[1]/l[0]
+    for i in range(1,len(l)-1):
+        if l[i+1]!=r*l[i]:
+            return False
+    return True
+
+def estArith(l):
+    if len(l)<1:
+        return None
+    r=l[1]-l[0]
+    for i in range(1,len(l)-1):
+        if l[i+1]!=r+l[i]:
+            return False
+    return True
 
 # def 
