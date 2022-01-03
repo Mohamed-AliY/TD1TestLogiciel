@@ -24,4 +24,14 @@ def moyenne(l):
     # print("nb_elements ",nb_elements)
     # print("somme",somme)
     return moyenne
+
+def ecart_type(l):
+    moy=moyenne(l)
+    s=0
+    for e in l:
+        s+=pow(e-moy,2)
+    s/=len(l)
+    return pow(s,0.5)
+
+
 # def 
