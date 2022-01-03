@@ -51,4 +51,24 @@ def estArith(l):
             return False
     return True
 
+def suiteGeo(n,l):
+    verif=None
+    l2=[]
+    if estGeo(l):
+        r=l[1]/l[0]
+        suiv=r*l[len(l)-1]
+        for i in range(n):
+            l2.append(suiv)
+            suiv=suiv*r
+    return verif,l2
+def suiteArith(n,l):
+    verif=None
+    l2=[]
+    if estArith(l):
+        r=l[1]-l[0]
+        suiv=r+l[len(l)-1]
+        for i in range(n):
+            l2.append(suiv)
+            suiv=suiv+r
+    return verif,l2
 # def 
